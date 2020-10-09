@@ -11,10 +11,38 @@
     <link rel="stylesheet" href="style.css">
 
     <!-- TODO: Update '<title>'. -->
-    <title>Document</title>
+    <title>Midterm Project</title>
   </head>
   <body>
+    <h1>Employee Complaint</h1>
+
+    <form action="">
+      <div id = "input">
+      <ul>
+        <li>
+          <label for="empName">Employee Name:</label>
+          <input type="text" id="empName" name="employeeName"/>
+      </li>
+      <li>
+        <label for="manager">Manager Name:</label>
+        <input type="text" id="mgr" name="mgr"/>
+      </li>
+      <li>
+        <label for="department">Department:</label>
+        <input type="text" id="dept" name="dept"/>
+      </li>
+      <li>
+        <label for="complaint">Details of Complaint:</label>
+        <textarea id="complaint" name="complaint"></textarea>
+      </li>
+    </ul>
+  </div>
+    <div>
+      <button type="submit">Submit</button>
+    </div>
+    </form>
     <!-- 'Connect' JS to this HTML file. -->
+
     <script src="./scripts.js"></script>
   </body>
 </html>
