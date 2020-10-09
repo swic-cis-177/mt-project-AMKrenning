@@ -3,11 +3,9 @@ const button = document.querySelector("button");
 const empName = document.querySelector("#empName");
 const details = document.querySelector("#complaint");
 
-//TODO: Listen for a 'click' on that button
 button.addEventListener("click", function () {
   console.log("Form Submitted");
 });
-//TODO: When there is a click, change the p tag to say '...'
 
 empName.addEventListener("focus", () => {
   console.log("Entered input");
