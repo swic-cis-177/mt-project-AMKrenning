@@ -2,22 +2,22 @@ const template = document.querySelector("template");
 const tbody = document.querySelector("tbody");
 const form = document.querySelector("form");
 
-export const processForm = (elements) => {
-  form.addEventListener("submit", (e) => {
-    e.preventDefault();
-    console.log(
-      Array.from(e.target.elements)
-        .filter(({ empName }) => empName)
-        .reduce(
-          (deets, { empName, value }) => ({
-            ...deets,
-            [empName]: value,
-          }),
-          {}
-        )
+/*
+ * @param {HTMLFormControlsCollection} elements
+ * @returns {Object}
+ */
+
+export const processForm = (elements) =>
+  Array.from(elements)
+
+    .filter(({ id }) => id)
+    .reduce(
+      (formData, { id, value }) => ({
+        ...formData,
+        [id]: value,
+      }),
+      {}
     );
-  });
-};
 
 export default processForm;
 
