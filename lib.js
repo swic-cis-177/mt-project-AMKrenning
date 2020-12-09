@@ -1,6 +1,5 @@
 const template = document.querySelector("template");
 const tbody = document.querySelector("tbody");
-const form = document.querySelector("form");
 
 /*
  * @param {HTMLFormControlsCollection} elements
