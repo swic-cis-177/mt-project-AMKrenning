@@ -18,6 +18,9 @@ export const processForm = (elements) => {
     );
   });
 };
+
+export default processForm;
+
 export const createTable = (elements) => {
   elements.forEach(({ empName, dept, mgr }) => {
     const newComplaintRow = template.content.cloneNode(true);
