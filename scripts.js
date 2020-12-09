@@ -1,5 +1,5 @@
 // Destructure named export
-import { processForm } from "./lib.js";
+import { processForm, addComplaint } from "./lib.js";
 
 const form = document.querySelector("form");
 
@@ -8,4 +8,5 @@ form.addEventListener("submit", (e) => {
   e.preventDefault();
 
   console.log(processForm(e.target.elements));
+  addComplaint(processForm);
 });
