@@ -1,4 +1,5 @@
-import processForm from "./lib.js";
+// Destructure named export
+import { processForm } from "./lib.js";
 
 const button = document.querySelector("button");
 const empName = document.querySelector("#empName");
