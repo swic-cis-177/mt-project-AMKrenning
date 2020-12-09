@@ -1,10 +1,21 @@
-const button = document.querySelector("button");
+import processForm from "./lib.js";
 
+const button = document.querySelector("button");
 const empName = document.querySelector("#empName");
 const details = document.querySelector("#complaint");
+const inputs = document.querySelectorAll("input");
+const form = document.querySelector("form");
+
+processForm(empName);
+
+//Query Selector
+form.addEventListener("submit", (e) => {
+  e.preventDefault();
+});
 
 button.addEventListener("click", function () {
   console.log("Form Submitted");
+  inputs.forEach((input) => (input.value = ""));
 });
 
 empName.addEventListener("focus", () => {
@@ -15,23 +26,6 @@ empName.addEventListener("blur", () => {
   console.log("Left input");
 });
 
-details.addEventListener("keydown", (e) => {
+details.addEventListener("keydown", () => {
   console.log("currently typing in: '${e.target}'");
-});
-
-//Query Selector
-document.querySelector("form").addEventListener("submit", (e) => {
-  e.preventDefault();
-  console.log("Prevented default from occurring", e);
-
-  var inputs = document.getElementsByTagName("input"),
-    clearTypes = { text: 1, details: 1 }, // etc. you fill this in
-    i = inputs.length,
-    input;
-
-  while (i) {
-    if (clearTypes[(input = inputs[--i]).type]) {
-      input.value = "";
-    }
-  }
 });

@@ -14,33 +14,57 @@
   <body>
     <h1>Employee Complaint</h1>
 
+    <main>
+      <tbody>
+      </tbody>
     <form action="">
       <div id = "input">
       <ul>
+    <span>
         <li>
           <label for="empName">Employee Name:</label>
-          <input type="text" id="empName" name="employeeName"/>
+          <input
+          type="text"
+          id="empName"
+          name="employeeName"
+          />
       </li>
+    </span>
+    <span>
       <li>
         <label for="manager">Manager Name:</label>
         <input type="text" id="mgr" name="mgr"/>
       </li>
+      </span>
+      <span>
       <li>
         <label for="department">Department:</label>
         <input type="text" id="dept" name="dept"/>
       </li>
+      </span>
+      <span>
       <li>
-        <label for="complaint">Details of Complaint:</label>
-        <textarea id="complaint" name="complaint"></textarea>
+        <label for="complaint" required>Complaint Summary:</label>
+        <input type="text" id="complaint" name="complaint"/>
       </li>
+      </span>
     </ul>
   </div>
     <div>
       <button type="submit">Submit</button>
     </div>
     </form>
+    </main>
+
+    <template id="complaint-row">
+      <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+    </template>
     <!-- 'Connect' JS to this HTML file. -->
 
-    <script src="./scripts.js"></script>
+    <script src="./scripts.js" type="module"></script>
   </body>
 </html>
